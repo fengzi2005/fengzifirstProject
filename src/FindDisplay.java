@@ -20,6 +20,7 @@ public class FindDisplay extends JFrame {
 
     private void initComponents(int index,String str) {
         textArea1 = new JTextArea();
+        textArea1.setEditable(false);
         returnStartJBT = new JButton();
         returnJBT = new JButton();
         scrollPane1 = new JScrollPane();
