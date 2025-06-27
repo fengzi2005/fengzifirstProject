@@ -12,8 +12,8 @@ import javax.swing.*;
 /**
  * @author fengzi
  */
-public class TestFindDisplay extends JFrame {
-    public TestFindDisplay(int index,String str) {
+public class FindDisplay extends JFrame {
+    public FindDisplay(int index, String str) {
         initComponents(index,str);
         this.setVisible(true);
     }
@@ -66,10 +66,9 @@ public class TestFindDisplay extends JFrame {
         returnJBT.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(finalResult.getCode() == 0){
                     dispose();
                     new TestJF0();
-                }
+
 
             }
         });
@@ -95,6 +94,9 @@ public class TestFindDisplay extends JFrame {
             //---- textArea1 ----
             textArea1.setFont(textArea1.getFont().deriveFont(textArea1.getFont().getStyle() | Font.BOLD, textArea1.getFont().getSize() + 6f));
             textArea1.setEditable(false);
+            textArea1.setOpaque(false);
+            scrollPane1.setOpaque(false);
+            scrollPane1.getViewport().setOpaque(false);
             scrollPane1.setViewportView(textArea1);
         }
         scrollPane1.setBounds(65, 105, 840, 365);
@@ -119,6 +121,11 @@ public class TestFindDisplay extends JFrame {
         contentPane.setPreferredSize(new Dimension(970, 635));
         setSize(970, 635);
         setLocationRelativeTo(null);
+
+
+        JLabel bgJLB = new JLabel(new ImageIcon("findJFramePng/background (3).png"));
+        bgJLB.setBounds(0,0,970,635);
+        this.getContentPane().add(bgJLB);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 

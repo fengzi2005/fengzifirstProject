@@ -2,9 +2,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-import javax.swing.event.AncestorListener;
 
-import net.miginfocom.swing.*;
 public class TestJF0 extends JFrame{
     public TestJF0() {
         initComponents();
@@ -36,7 +34,7 @@ public class TestJF0 extends JFrame{
         label1.setBounds(145, 5, 195, 33);
 
         //---- label2 ----
-        label2.setText("\u67e5\u8be2\u6a21\u5f0f");
+        label2.setText("\u67e5\u8be2\u65b9\u5f0f");
         label2.setFont(label2.getFont().deriveFont(label2.getFont().getStyle() & ~Font.BOLD, label2.getFont().getSize() + 8f));
         contentPane.add(label2);
         label2.setBounds(new Rectangle(new Point(115, 110), label2.getPreferredSize()));
@@ -105,11 +103,11 @@ public class TestJF0 extends JFrame{
                 int selectedIndex = dropdown.getSelectedIndex();
                 String findStr = findJTF.getText();
                 if (selectedIndex == 0) {
-                    throwClue("请选择查询模式");
+                    throwClue("请选择查询方式");
                 }else if (findStr.isEmpty()) {
                     throwClue("请输入查询内容");
                 }else {
-                    new TestFindDisplay(selectedIndex, findStr);
+                    new FindDisplay(selectedIndex, findStr);
                     dispose();
                 }
             }
