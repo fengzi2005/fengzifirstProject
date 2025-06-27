@@ -10,4 +10,7 @@ public class Information {
         this.id = id;
         this.title = title;
     }
+
+    public Information() {
+    }
 }

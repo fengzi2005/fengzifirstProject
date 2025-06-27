@@ -114,7 +114,11 @@ public class FindDisplay extends JFrame {
         });
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
+        scrollPane1 = new JScrollPane();
+        textArea1 = new JTextArea();
         label2 = new JLabel();
+        returnStartJBT = new JButton();
+        returnJBT = new JButton();
 
         //======== this ========
         setTitle("\u5a92\u4f53\u67e5\u8be2\u6a21\u5f0f");

@@ -11,8 +11,8 @@ import javax.swing.*;
 /**
  * @author fengzi
  */
-public class clueDialog extends JDialog{
-    public clueDialog(Window owner,String str) {
+public class ClueDialog extends JDialog{
+    public ClueDialog(Window owner, String str) {
         super(owner);
         initComponents(str);
         this.setVisible(true);
@@ -53,6 +53,10 @@ public class clueDialog extends JDialog{
         setSize(380, 195);
         setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
+        this.setTitle("提示");
+        textArea1.setOpaque(false);
+        textArea1.setBorder(null);
+        scrollPane1.setBorder(null);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
