@@ -2,9 +2,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-import javax.swing.event.AncestorListener;
 
-import net.miginfocom.swing.*;
 public class TestJF0 extends JFrame{
     public TestJF0() {
         initComponents();
@@ -109,7 +107,7 @@ public class TestJF0 extends JFrame{
                 }else if (findStr.isEmpty()) {
                     throwClue("请输入查询内容");
                 }else {
-                    new TestFindDisplay(selectedIndex, findStr);
+                    new FindDisplay(selectedIndex, findStr);
                     dispose();
                 }
             }

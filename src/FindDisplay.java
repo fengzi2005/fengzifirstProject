@@ -12,8 +12,8 @@ import javax.swing.*;
 /**
  * @author fengzi
  */
-public class TestFindDisplay extends JFrame {
-    public TestFindDisplay(int index,String str) {
+public class FindDisplay extends JFrame {
+    public FindDisplay(int index, String str) {
         initComponents(index,str);
         this.setVisible(true);
     }
