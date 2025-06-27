@@ -1,0 +1,90 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"$locationPolicy": 1
+			"$sizePolicy": 1
+			"font": new java.awt.Font( "Dialog", 1, 16 )
+			"background": sfield java.awt.SystemColor activeCaptionBorder
+			"title": "媒体编辑模式"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "媒体编辑模式"
+				"horizontalAlignment": 2
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131073, 16, false )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 145
+				"y": 5
+				"width": 195
+				"height": 33
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "编辑方式"
+				"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 65536, 8, false )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 115
+				"y": 110
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "媒体编号"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 83
+				"height": 28
+				"x": 115
+				"y": 155
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "findJTF"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 215
+				"y": 155
+				"width": 120
+				"height": 35
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "dropdown"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "            "
+					addElement( "            " )
+					addElement( "编辑媒体" )
+					addElement( "删除媒体" )
+				}
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131072, 6, false )
+				"selectedIndex": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 215
+				"y": 110
+				"width": 120
+				"height": 35
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "findJBT"
+				"text": "确定"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 120
+				"y": 235
+				"width": 95
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "retrunJBT"
+				"text": "返回"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 95
+				"height": 40
+				"x": 235
+				"y": 235
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 160, 5 )
+			"size": new java.awt.Dimension( 465, 400 )
+		} )
+	}
+}
