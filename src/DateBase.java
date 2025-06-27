@@ -10,6 +10,7 @@ public class DateBase implements OperateInformation {
     String sql3 = "SELECT * FROM information WHERE title = ?";
     String sql4 = "SELECT * FROM information WHERE type = ?";
     String sql5 = "SELECT * FROM information";
+    String sql6 = "UPDATE information SET id = ?,title = ?,author = ?, grade = ?,publishHouse = ?,ISBN = ?,pageNumber = ?,type = ? WHERE id = ?";
 
 
     public Result addInfo(String id, String title, String author, String grade, String publishHouse, String ISBN, String pageNum, String str) {
@@ -131,6 +132,30 @@ public class DateBase implements OperateInformation {
             e.printStackTrace();
         }
         return Result.fail("媒体库中无媒体！");
+    }
+
+    @Override
+    public Result updateInfo(String id, String newId, String title, String author, String grade, String publishHouse, String ISBN, String pageNum, String str) {
+        if (idFindInfo(newId).getCode() == 0) {
+            return Result.fail("该编号已被占用！");
+        }
+        try (Connection conn = DriverManager.getConnection(url,user,password);
+            PreparedStatement pstmt = conn.prepareStatement(sql6);
+            ResultSet rs = null){
+            pstmt.setString(1,newId);
+            pstmt.setString(2,title);
+            pstmt.setString(3,author);
+            pstmt.setString(4,grade);
+            pstmt.setString(5,publishHouse);
+            pstmt.setString(6,ISBN);
+            pstmt.setString(7,pageNum);
+            pstmt.setString(8,str);
+            pstmt.setString(9,id);
+            pstmt.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return Result.ok("修改成功");
     }
 
     private static void addToListOfPicture(ResultSet rs, ArrayList<Information> list) throws SQLException {

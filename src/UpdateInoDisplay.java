@@ -50,8 +50,6 @@ public class UpdateInoDisplay extends JFrame {
 
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
-        scrollPane1 = new JScrollPane();
-        textArea1 = new JTextArea();
         label2 = new JLabel();
         label3 = new JLabel();
         label4 = new JLabel();
@@ -61,9 +59,6 @@ public class UpdateInoDisplay extends JFrame {
         textField3 = new JTextField();
         label7 = new JLabel();
         textField4 = new JTextField();
-        label8 = new JLabel();
-        label9 = new JLabel();
-        label10 = new JLabel();
         label11 = new JLabel();
         textField5 = new JTextField();
         textField6 = new JTextField();
@@ -149,19 +144,16 @@ public class UpdateInoDisplay extends JFrame {
         textField4.setBounds(105, 312, 195, 34);
 
         //---- label8 ----
-        label8.setText("\u51fa\u7248\u793e\uff1a");
         label8.setFont(label8.getFont().deriveFont(label8.getFont().getStyle() | Font.BOLD, label8.getFont().getSize() + 6f));
         contentPane.add(label8);
         label8.setBounds(370, 190, 95, 35);
 
         //---- label9 ----
-        label9.setText("ISBN\u53f7\uff1a");
         label9.setFont(label9.getFont().deriveFont(label9.getFont().getStyle() | Font.BOLD, label9.getFont().getSize() + 6f));
         contentPane.add(label9);
         label9.setBounds(370, 230, 100, 35);
 
         //---- label10 ----
-        label10.setText("\u9875\u6570 \uff1a");
         label10.setFont(label10.getFont().deriveFont(label10.getFont().getStyle() | Font.BOLD, label10.getFont().getSize() + 6f));
         contentPane.add(label10);
         label10.setBounds(370, 270, 100, 35);
@@ -286,7 +278,7 @@ public class UpdateInoDisplay extends JFrame {
 
             @Override
             public void focusLost(FocusEvent e) {
-                System.out.println("监听到了");
+                //System.out.println("监听到了");
                 String str = textField5.getText();
                 switch (str) {
                     case "图书" -> initLabalofBooks();

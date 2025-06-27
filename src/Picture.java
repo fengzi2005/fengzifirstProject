@@ -8,6 +8,9 @@ public class Picture extends Information{
 
     }
 
+    public Picture() {
+    }
+
     public Picture(String id, String title, String author, String grade, String length, String publishState, String width) {
         super(id, title, author, grade);
         this.length = length;

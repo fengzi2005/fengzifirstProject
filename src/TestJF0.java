@@ -46,7 +46,7 @@ public class TestJF0 extends JFrame{
         label3.setBounds(115, 155, 83, 28);
 
         //---- findJTF ----
-        findJTF.setFont(findJTF.getFont().deriveFont(findJTF.getFont().getSize() + 6f));
+        findJTF.setFont(findJTF.getFont().deriveFont(findJTF.getFont().getStyle() | Font.BOLD, findJTF.getFont().getSize() + 6f));
         contentPane.add(findJTF);
         findJTF.setBounds(215, 155, 120, 35);
 
@@ -128,6 +128,6 @@ public class TestJF0 extends JFrame{
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 
     private void throwClue(String str) {
-        new clueDialog(this,str);
+        new ClueDialog(this,str);
     }
 }
