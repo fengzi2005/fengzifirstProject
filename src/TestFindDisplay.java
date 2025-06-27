@@ -22,6 +22,7 @@ public class TestFindDisplay extends JFrame {
         textArea1 = new JTextArea();
         returnStartJBT = new JButton();
         returnJBT = new JButton();
+        scrollPane1 = new JScrollPane();
         OperateInformation operate = new DateBase();
         Result result = null;
         switch (index) {
@@ -58,14 +59,7 @@ public class TestFindDisplay extends JFrame {
                     break;
             }
         }
-        returnJBT.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-                new TestJF0();
-            }
-        });
-
+        textArea1.setCaretPosition(0);
         //Result result = operate.typeFindInfo(str);
 
         Result finalResult = result;
@@ -81,11 +75,7 @@ public class TestFindDisplay extends JFrame {
         });
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
-        scrollPane1 = new JScrollPane();
-        textArea1 = new JTextArea();
         label2 = new JLabel();
-        returnStartJBT = new JButton();
-        returnJBT = new JButton();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -104,10 +94,11 @@ public class TestFindDisplay extends JFrame {
 
             //---- textArea1 ----
             textArea1.setFont(textArea1.getFont().deriveFont(textArea1.getFont().getStyle() | Font.BOLD, textArea1.getFont().getSize() + 6f));
+            textArea1.setEditable(false);
             scrollPane1.setViewportView(textArea1);
         }
-        contentPane.add(scrollPane1);
         scrollPane1.setBounds(65, 105, 840, 365);
+        contentPane.add(scrollPane1);
 
         //---- label2 ----
         label2.setText("\u4e3a\u60a8\u67e5\u8be2\u5230\u4ee5\u4e0b\u5a92\u4f53\uff1a");

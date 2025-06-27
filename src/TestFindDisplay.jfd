@@ -26,6 +26,7 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JTextArea" ) {
 					name: "textArea1"
 					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
+					"editable": false
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 65
