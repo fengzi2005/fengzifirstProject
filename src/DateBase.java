@@ -9,6 +9,8 @@ public class DateBase implements OperateInformation {
     String sql2 = "SELECT * FROM information WHERE id = ?";
     String sql3 = "SELECT * FROM information WHERE title = ?";
     String sql4 = "SELECT * FROM information WHERE type = ?";
+    String sql5 = "SELECT * FROM information";
+
 
     public Result addInfo(String id, String title, String author, String grade, String publishHouse, String ISBN, String pageNum, String str) {
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
@@ -108,6 +110,27 @@ public class DateBase implements OperateInformation {
             e.printStackTrace();
         }
         return Result.fail("不存在此类型的媒体！");
+    }
+
+    @Override
+    public Result allFindInfo() {
+        ArrayList<Information> list = new ArrayList<>();
+        try (Connection conn = DriverManager.getConnection(url,user,password);
+             PreparedStatement pstmt = conn.prepareStatement(sql5);){
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                switch (rs.getString("type")){
+                    case "图书" -> addBookTolist(list, rs);
+                    case "视频光盘" -> addVedioTolist(list,rs);
+                    case "图画" -> addPictureTolist(list,rs);
+                }
+
+            }
+            if (list.size() != 0) return Result.ok(list);
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Result.fail("媒体库中无媒体！");
     }
 
     private static void addToListOfPicture(ResultSet rs, ArrayList<Information> list) throws SQLException {

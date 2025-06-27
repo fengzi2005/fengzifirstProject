@@ -3,6 +3,7 @@ public interface OperateInformation {
     Result idFindInfo (String id);
     Result titleFindInfo (String title);
     Result typeFindInfo (String title);
+    Result allFindInfo ();
 
 
 }

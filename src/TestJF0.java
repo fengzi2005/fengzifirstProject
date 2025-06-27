@@ -96,6 +96,7 @@ public class TestJF0 extends JFrame{
 
         dropdown.setOpaque(false);
         findJTF.setOpaque(false);
+        setTitle("媒体查询模式");
 
         findJBT.addActionListener(new ActionListener() {
             @Override
@@ -104,11 +105,13 @@ public class TestJF0 extends JFrame{
                 String findStr = findJTF.getText();
                 if (selectedIndex == 0) {
                     throwClue("请选择查询方式");
-                }else if (findStr.isEmpty()) {
-                    throwClue("请输入查询内容");
                 }else {
-                    new FindDisplay(selectedIndex, findStr);
-                    dispose();
+                    if (selectedIndex != 4 && findStr.isEmpty()) {
+                        throwClue("请输入查询内容");
+                    } else {
+                        new FindDisplay(selectedIndex, findStr);
+                        dispose();
+                    }
                 }
             }
         });

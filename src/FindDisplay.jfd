@@ -9,13 +9,14 @@ new FormModel {
 			name: "this"
 			"$locationPolicy": 1
 			"$sizePolicy": 1
+			"title": "媒体查询模式"
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label1"
 				"text": "媒体查询模式"
 				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 25, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 375
-				"y": 5
+				"x": 505
+				"y": 0
 				"width": 245
 				"height": 45
 			} )
@@ -26,43 +27,42 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JTextArea" ) {
 					name: "textArea1"
 					"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
-					"editable": false
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 65
+				"x": 70
 				"y": 105
-				"width": 840
-				"height": 365
+				"width": 1125
+				"height": 425
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
 				"text": "为您查询到以下媒体："
 				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 65
+				"x": 75
 				"y": 75
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "returnStartJBT"
 				"text": "主界面"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 310
-				"y": 500
-				"width": 95
-				"height": 45
+				"x": 415
+				"y": 555
+				"width": 100
+				"height": 50
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "returnJBT"
 				"text": "返回"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"width": 95
-				"height": 45
-				"x": 565
-				"y": 500
+				"width": 100
+				"height": 50
+				"x": 715
+				"y": 555
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 15 )
-			"size": new java.awt.Dimension( 970, 635 )
+			"location": new java.awt.Point( 0, 125 )
+			"size": new java.awt.Dimension( 1290, 705 )
 		} )
 	}
 }
