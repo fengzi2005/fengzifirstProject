@@ -11,7 +11,7 @@ public class DateBase implements OperateInformation {
     String sql4 = "SELECT * FROM information WHERE type = ?";
     String sql5 = "SELECT * FROM information";
     String sql6 = "UPDATE information SET id = ?,title = ?,author = ?, grade = ?,publishHouse = ?,ISBN = ?,pageNumber = ?,type = ? WHERE id = ?";
-
+    String sql7 = "DELETE FROM information WHERE id = ?";
 
     public Result addInfo(String id, String title, String author, String grade, String publishHouse, String ISBN, String pageNum, String str) {
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
@@ -156,6 +156,19 @@ public class DateBase implements OperateInformation {
             e.printStackTrace();
         }
         return Result.ok("修改成功");
+    }
+
+    @Override
+    public Result deleteInfo(String id) {
+        try (Connection conn = DriverManager.getConnection(url,user,password);
+            PreparedStatement pstmt = conn.prepareStatement(sql7)){
+            pstmt.setString(1,id);
+            pstmt.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+            return Result.fail("删除失败！");
+        }
+        return Result.ok("删除成功！");
     }
 
     private static void addToListOfPicture(ResultSet rs, ArrayList<Information> list) throws SQLException {

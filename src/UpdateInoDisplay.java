@@ -34,17 +34,43 @@ public class UpdateInoDisplay extends JFrame {
         label8 = new JLabel();
         label9 = new JLabel();
         label10 = new JLabel();
+        label5 = new JLabel();
+        textField2 = new JTextField();
+        textField3 = new JTextField();
+        textField4 = new JTextField();
+        textField5 = new JTextField();
+        textField6 = new JTextField();
+        textField7 = new JTextField();
+        textField8 = new JTextField();
+        textField9 = new JTextField();
 
         /*this.setComponentZOrder(label8,0);
         this.setComponentZOrder(label9,0);
         this.setComponentZOrder(label10,0);*/
 
         Information info = (Information) result.getDate();
+        textField9.setText(info.id);
+        textField2.setText(info.title);
+        textField3.setText(info.author);
+        textField4.setText(info.grade);
         if (info.getClass().equals(new Picture().getClass())) {
+
+            textField5.setText("图画");
+            textField6.setText(((Picture) info).publishState);
+            textField7.setText(((Picture) info).length);
+            textField8.setText(((Picture) info).width);
             initLabalofPicture();
         } else if (info.getClass().equals(new VideoDiscs().getClass())) {
+            textField5.setText("视频光盘");
+            textField6.setText(((VideoDiscs) info).publisherName);
+            textField7.setText(((VideoDiscs) info).publishYear);
+            textField8.setText(((VideoDiscs) info).videoTime);
             initLabalofVedio();
         }else {
+            textField5.setText("图书");
+            textField6.setText(((Books) info).publicHouse);
+            textField7.setText(((Books) info).ISBN);
+            textField8.setText(((Books) info).pageNum);
             initLabalofBooks();
         }
 
@@ -53,20 +79,12 @@ public class UpdateInoDisplay extends JFrame {
         label2 = new JLabel();
         label3 = new JLabel();
         label4 = new JLabel();
-        label5 = new JLabel();
-        textField2 = new JTextField();
         label6 = new JLabel();
-        textField3 = new JTextField();
         label7 = new JLabel();
-        textField4 = new JTextField();
         label11 = new JLabel();
-        textField5 = new JTextField();
-        textField6 = new JTextField();
-        textField7 = new JTextField();
-        textField8 = new JTextField();
         button1 = new JButton();
         button2 = new JButton();
-        textField9 = new JTextField();
+        button3 = new JButton();
         scrollPane2 = new JScrollPane();
 
         //======== this ========
@@ -217,14 +235,27 @@ public class UpdateInoDisplay extends JFrame {
         textField8.setOpaque(false);
         textField9.setOpaque(false);
         if (index == 2) {
-            button1.setText("确认删除");
+            button3.setText("确认删除");
+            contentPane.add(button3);
+            button3.setBounds(310, 440, 105, 50);
             this.getContentPane().removeAll();
             this.getContentPane().add(label1);
             this.getContentPane().add(label2);
             this.getContentPane().add(scrollPane1);
-            this.getContentPane().add(button1);
+            this.getContentPane().add(button3);
             this.getContentPane().add(button2);
-
+            this.getContentPane().add(bgJLB);
+            button3.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    OperateInformation operate = new DateBase();
+                    Result result1 = operate.deleteInfo(id);
+                    throwClue(result1.getMsg());
+                    if (result1.getCode() == 0){
+                        textArea1.setText("");
+                    }
+                }
+            });
         }
         button1.addActionListener(new ActionListener() {
             @Override
@@ -334,6 +365,7 @@ public class UpdateInoDisplay extends JFrame {
     private JTextField textField8;
     private JButton button1;
     private JButton button2;
+    private JButton button3;
     private JTextField textField9;
     private JScrollPane scrollPane2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
