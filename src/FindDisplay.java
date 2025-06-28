@@ -19,11 +19,13 @@ public class FindDisplay extends JFrame {
     }
 
     private void initComponents(int index,String str) {
+        label1 = new JLabel();
+        scrollPane1 = new JScrollPane();
         textArea1 = new JTextArea();
-        textArea1.setEditable(false);
+        label2 = new JLabel();
         returnStartJBT = new JButton();
         returnJBT = new JButton();
-        scrollPane1 = new JScrollPane();
+        textArea1.setEditable(false);
         OperateInformation operate = new DateBase();
         Result result = null;
         switch (index) {
@@ -125,9 +127,15 @@ public class FindDisplay extends JFrame {
 
             }
         });
+
+        returnStartJBT.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new StartJFrame();
+            }
+        });
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        label1 = new JLabel();
-        label2 = new JLabel();
 
         //======== this ========
         setTitle("\u5a92\u4f53\u67e5\u8be2\u6a21\u5f0f");
@@ -160,13 +168,21 @@ public class FindDisplay extends JFrame {
 
         //---- returnStartJBT ----
         returnStartJBT.setText("\u4e3b\u754c\u9762");
+        returnStartJBT.setBackground(new Color(0x6699ff));
+        returnStartJBT.setFont(returnStartJBT.getFont().deriveFont(returnStartJBT.getFont().getStyle() | Font.BOLD, returnStartJBT.getFont().getSize() + 6f));
+        returnStartJBT.setForeground(Color.white);
+        returnStartJBT.setBorder(null);
         contentPane.add(returnStartJBT);
-        returnStartJBT.setBounds(415, 555, 100, 50);
+        returnStartJBT.setBounds(395, 555, 120, 55);
 
         //---- returnJBT ----
         returnJBT.setText("\u8fd4\u56de");
+        returnJBT.setFont(returnJBT.getFont().deriveFont(returnJBT.getFont().getStyle() | Font.BOLD, returnJBT.getFont().getSize() + 6f));
+        returnJBT.setForeground(Color.white);
+        returnJBT.setBackground(new Color(0x6699ff));
+        returnJBT.setBorder(null);
         contentPane.add(returnJBT);
-        returnJBT.setBounds(715, 555, 100, 50);
+        returnJBT.setBounds(695, 555, 120, 55);
 
         contentPane.setPreferredSize(new Dimension(1290, 705));
         setSize(1290, 705);
@@ -177,9 +193,7 @@ public class FindDisplay extends JFrame {
         scrollPane1.getViewport().setOpaque(false);
         scrollPane1.setViewportView(textArea1);
 
-        JLabel bgJLB = new JLabel(new ImageIcon("findJFramePng/background (4).png"));
-        bgJLB.setBounds(0,0,1290,705);
-        this.getContentPane().add(bgJLB);
+        contentPane.setBackground(Color.white);
     }
 
 

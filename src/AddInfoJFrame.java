@@ -183,7 +183,6 @@ public class AddInfoJFrame extends JFrame {
 
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
 
-
         //======== this ========
         var contentPane = getContentPane();
         contentPane.setLayout(null);
@@ -263,15 +262,19 @@ public class AddInfoJFrame extends JFrame {
 
         //---- button1 ----
         button1.setText("\u6dfb\u52a0\u5a92\u4f53");
-        button1.setFont(button1.getFont().deriveFont(button1.getFont().getStyle() | Font.BOLD));
+        button1.setFont(button1.getFont().deriveFont(button1.getFont().getSize() + 6f));
+        button1.setForeground(Color.white);
+        button1.setBackground(new Color(0x6699ff));
         contentPane.add(button1);
-        button1.setBounds(115, 520, 105, 55);
+        button1.setBounds(135, 520, 110, 55);
 
         //---- button2 ----
         button2.setText("\u8fd4\u56de");
-        button2.setFont(button2.getFont().deriveFont(button2.getFont().getStyle() | Font.BOLD));
+        button2.setFont(button2.getFont().deriveFont(Font.BOLD, button2.getFont().getSize() + 6f));
+        button2.setForeground(Color.white);
+        button2.setBackground(new Color(0x6699ff));
         contentPane.add(button2);
-        button2.setBounds(390, 520, 105, 55);
+        button2.setBounds(355, 520, 110, 55);
 
         //---- label10 ----
         label10.setText("\u7c7b\u578b\uff1a");
@@ -328,9 +331,7 @@ public class AddInfoJFrame extends JFrame {
         textField9.setOpaque(false);
         textField10.setOpaque(false);
 
-        JLabel bgJLB = new JLabel(new ImageIcon("addJFramePng/background.png"));
-        bgJLB.setBounds(0,0,610,640);
-        this.getContentPane().add(bgJLB);
+        contentPane.setBackground(Color.white);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off

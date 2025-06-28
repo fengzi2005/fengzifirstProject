@@ -42,13 +42,13 @@ public class TestJF0 extends JFrame{
 
         //---- label2 ----
         label2.setText("\u67e5\u8be2\u65b9\u5f0f");
-        label2.setFont(label2.getFont().deriveFont(label2.getFont().getStyle() & ~Font.BOLD, label2.getFont().getSize() + 8f));
+        label2.setFont(label2.getFont().deriveFont(label2.getFont().getStyle() | Font.BOLD, label2.getFont().getSize() + 8f));
         contentPane.add(label2);
         label2.setBounds(new Rectangle(new Point(115, 110), label2.getPreferredSize()));
 
         //---- label3 ----
         label3.setText("\u67e5\u8be2\u5185\u5bb9");
-        label3.setFont(label3.getFont().deriveFont(label3.getFont().getStyle() & ~Font.BOLD, label3.getFont().getSize() + 8f));
+        label3.setFont(label3.getFont().deriveFont(label3.getFont().getStyle() | Font.BOLD, label3.getFont().getSize() + 8f));
         contentPane.add(label3);
         label3.setBounds(115, 155, 83, 28);
 
@@ -72,13 +72,19 @@ public class TestJF0 extends JFrame{
 
         //---- findJBT ----
         findJBT.setText("\u67e5\u8be2");
+        findJBT.setFont(findJBT.getFont().deriveFont(findJBT.getFont().getStyle() | Font.BOLD, findJBT.getFont().getSize() + 6f));
+        findJBT.setForeground(Color.white);
+        findJBT.setBackground(new Color(0x6699ff));
         contentPane.add(findJBT);
-        findJBT.setBounds(120, 235, 95, 40);
+        findJBT.setBounds(95, 235, 95, 40);
 
         //---- retrunJBT ----
         retrunJBT.setText("\u8fd4\u56de");
+        retrunJBT.setFont(retrunJBT.getFont().deriveFont(retrunJBT.getFont().getStyle() | Font.BOLD, retrunJBT.getFont().getSize() + 6f));
+        retrunJBT.setForeground(Color.white);
+        retrunJBT.setBackground(new Color(0x6699ff));
         contentPane.add(retrunJBT);
-        retrunJBT.setBounds(235, 235, 95, 40);
+        retrunJBT.setBounds(260, 235, 95, 40);
 
         {
             // compute preferred size
@@ -97,9 +103,7 @@ public class TestJF0 extends JFrame{
         setSize(465, 400);
         setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
-        JLabel bgJLB = new JLabel(new ImageIcon("findJFramePng/background (2).png"));
-        bgJLB.setBounds(0,0,465,400);
-        this.getContentPane().add(bgJLB);
+        contentPane.setBackground(Color.white);
 
         dropdown.setOpaque(false);
         findJTF.setOpaque(false);
