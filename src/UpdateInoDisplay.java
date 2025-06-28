@@ -279,14 +279,7 @@ public class UpdateInoDisplay extends JFrame {
                     Result result1 = operate.updateInfo(id,newId,title,author,grade,publishHouse,ISBN,pageNumber,type);
                     throwClue(result1.getMsg());
                     if (result1.getCode() == 0){
-                        textField2.setText("");
-                        textField3.setText("");
-                        textField4.setText("");
-                        textField5.setText("");
-                        textField6.setText("");
-                        textField7.setText("");
-                        textField8.setText("");
-                        textField9.setText("");
+                        textArea1.setText("[编号:" + newId + "  标题:" + title + "  作者:" + author + "  评级:" + grade + "  出版社:" + publishHouse + "  ISBN号:" + ISBN + "  页数:" + pageNumber + "  类型:" +type + "]");
                     }
                 }
 

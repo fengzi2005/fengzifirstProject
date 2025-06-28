@@ -136,7 +136,7 @@ public class DateBase implements OperateInformation {
 
     @Override
     public Result updateInfo(String id, String newId, String title, String author, String grade, String publishHouse, String ISBN, String pageNum, String str) {
-        if (idFindInfo(newId).getCode() == 0) {
+        if (!id.equals(newId) && idFindInfo(newId).getCode() == 0)  {
             return Result.fail("该编号已被占用！");
         }
         try (Connection conn = DriverManager.getConnection(url,user,password);
