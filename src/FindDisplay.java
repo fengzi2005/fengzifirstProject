@@ -54,27 +54,40 @@ public class FindDisplay extends JFrame {
                     text.append("\n");
 
                     result =  operate.typeFindInfo("图书");
-                    size = ((ArrayList<?>) result.getDate()).size();
-                    text.append("其中图书数量为：" + size + "\n");
-                    for(Information information : (ArrayList<Information>)result.getDate()) {
-                        text = text.append(information);
+                    if (result.getCode() == 0) {
+                        size = ((ArrayList<?>) result.getDate()).size();
+                        text.append("其中图书数量为：" + size + "\n");
+                        for(Information information : (ArrayList<Information>)result.getDate()) {
+                            text = text.append(information);
+                        }
+                    }else {
+                        text.append("其中图书数量为：0" + "\n");
                     }
                     text.append("\n");
 
                     result =  operate.typeFindInfo("视频光盘");
-                    size = ((ArrayList<?>) result.getDate()).size();
-                    text.append("其中视频光盘数量为：" + size + "\n");
-                    for(Information information : (ArrayList<Information>)result.getDate()) {
-                        text = text.append(information);
+                    if(result.getCode() == 0) {
+                        size = ((ArrayList<?>) result.getDate()).size();
+                        text.append("视频光盘数量为：" + size + "\n");
+                        for(Information information : (ArrayList<Information>)result.getDate()) {
+                            text = text.append(information);
+                        }
+                    }else {
+                        text.append("视频光盘数量为：0" + "\n");
                     }
                     text.append("\n");
 
                     result = operate.typeFindInfo("图画");
-                    size = ((ArrayList<?>) result.getDate()).size();
-                    text.append("其中图画数量为：" + size + "\n");
-                    for(Information information : (ArrayList<Information>)result.getDate()) {
-                        text = text.append(information);
+                    if (result.getCode() == 0){
+                        size = ((ArrayList<?>) result.getDate()).size();
+                        text.append("图画数量为：" + size + "\n");
+                        for(Information information : (ArrayList<Information>)result.getDate()) {
+                            text = text.append(information);
+                        }
+                    }else {
+                        text.append("图画数量为：0" + "\n");
                     }
+
                 }else {
                     for(Information information : (ArrayList<Information>)result.getDate()) {
                         text = text.append(information);
@@ -89,7 +102,7 @@ public class FindDisplay extends JFrame {
                     textArea1.setText("不存在编号为" + str + "的媒体");
                     break;
                 case 2 :
-                    textArea1.setText("不存标题号为" + str + "的媒体");
+                    textArea1.setText("不存在标题为" + str + "的媒体");
                     break;
                 case 3 :
                     textArea1.setText("不存在类型为" + str + "的媒体");
