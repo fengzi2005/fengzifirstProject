@@ -14,6 +14,7 @@ new FormModel {
 				name: "label1"
 				"text": "编辑媒体"
 				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 19, false )
+				"foreground": new com.jformdesigner.model.SwingColor( "ActionButton.focusedBorderColor" )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 495
 				"y": 0
@@ -55,6 +56,7 @@ new FormModel {
 				name: "label4"
 				"text": "编号："
 				"font": #SwingDerivedFont0
+				"background": new java.awt.Color( 51, 153, 255, 255 )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 60
 				"height": 35
@@ -69,7 +71,7 @@ new FormModel {
 				"width": 60
 				"height": 35
 				"x": 45
-				"y": 230
+				"y": 240
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField2"
@@ -78,7 +80,7 @@ new FormModel {
 				"width": 195
 				"height": 34
 				"x": 105
-				"y": 232
+				"y": 242
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label6"
@@ -88,7 +90,7 @@ new FormModel {
 				"width": 60
 				"height": 35
 				"x": 45
-				"y": 270
+				"y": 290
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField3"
@@ -97,7 +99,7 @@ new FormModel {
 				"width": 195
 				"height": 34
 				"x": 105
-				"y": 272
+				"y": 292
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label7"
@@ -107,7 +109,7 @@ new FormModel {
 				"width": 60
 				"height": 35
 				"x": 45
-				"y": 310
+				"y": 340
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField4"
@@ -116,7 +118,7 @@ new FormModel {
 				"width": 195
 				"height": 34
 				"x": 105
-				"y": 312
+				"y": 342
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label8"
@@ -136,7 +138,7 @@ new FormModel {
 				"width": 100
 				"height": 35
 				"x": 370
-				"y": 230
+				"y": 240
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label10"
@@ -146,7 +148,7 @@ new FormModel {
 				"width": 100
 				"height": 35
 				"x": 370
-				"y": 270
+				"y": 290
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label11"
@@ -156,7 +158,7 @@ new FormModel {
 				"width": 70
 				"height": 35
 				"x": 45
-				"y": 350
+				"y": 390
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField5"
@@ -165,7 +167,7 @@ new FormModel {
 				"width": 195
 				"height": 34
 				"x": 105
-				"y": 352
+				"y": 392
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField6"
@@ -183,7 +185,7 @@ new FormModel {
 				"width": 310
 				"height": 34
 				"x": 455
-				"y": 230
+				"y": 240
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField8"
@@ -192,7 +194,7 @@ new FormModel {
 				"width": 310
 				"height": 34
 				"x": 455
-				"y": 270
+				"y": 290
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
@@ -227,8 +229,26 @@ new FormModel {
 				"x": 450
 				"y": 305
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label15"
+				"foreground": sfield java.awt.Color red
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 215
+				"height": 18
+				"x": 110
+				"y": 225
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label16"
+				"foreground": sfield java.awt.Color red
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 215
+				"height": 18
+				"x": 110
+				"y": 425
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 25 )
+			"location": new java.awt.Point( 0, 35 )
 			"size": new java.awt.Dimension( 1145, 575 )
 		} )
 	}

@@ -35,6 +35,8 @@ public class UpdateInoDisplay extends JFrame {
         label9 = new JLabel();
         label10 = new JLabel();
         label5 = new JLabel();
+        label15 = new JLabel();
+        label16 = new JLabel();
         textField2 = new JTextField();
         textField3 = new JTextField();
         textField4 = new JTextField();
@@ -43,6 +45,8 @@ public class UpdateInoDisplay extends JFrame {
         textField7 = new JTextField();
         textField8 = new JTextField();
         textField9 = new JTextField();
+
+        button3 = new JButton();
 
         /*this.setComponentZOrder(label8,0);
         this.setComponentZOrder(label9,0);
@@ -79,12 +83,12 @@ public class UpdateInoDisplay extends JFrame {
         label2 = new JLabel();
         label3 = new JLabel();
         label4 = new JLabel();
+        label5 = new JLabel();
         label6 = new JLabel();
         label7 = new JLabel();
         label11 = new JLabel();
         button1 = new JButton();
         button2 = new JButton();
-        button3 = new JButton();
         scrollPane2 = new JScrollPane();
 
         //======== this ========
@@ -96,6 +100,7 @@ public class UpdateInoDisplay extends JFrame {
         //---- label1 ----
         label1.setText("\u7f16\u8f91\u5a92\u4f53");
         label1.setFont(label1.getFont().deriveFont(label1.getFont().getStyle() | Font.BOLD, label1.getFont().getSize() + 19f));
+        label1.setForeground(UIManager.getColor("ActionButton.focusedBorderColor"));
         contentPane.add(label1);
         label1.setBounds(new Rectangle(new Point(495, 0), label1.getPreferredSize()));
 
@@ -125,6 +130,7 @@ public class UpdateInoDisplay extends JFrame {
         //---- label4 ----
         label4.setText("\u7f16\u53f7\uff1a");
         label4.setFont(label4.getFont().deriveFont(label4.getFont().getStyle() | Font.BOLD, label4.getFont().getSize() + 6f));
+        label4.setBackground(new Color(0x3399ff));
         contentPane.add(label4);
         label4.setBounds(45, 190, 60, 35);
 
@@ -132,60 +138,63 @@ public class UpdateInoDisplay extends JFrame {
         label5.setText("\u6807\u9898\uff1a");
         label5.setFont(label5.getFont().deriveFont(label5.getFont().getStyle() | Font.BOLD, label5.getFont().getSize() + 6f));
         contentPane.add(label5);
-        label5.setBounds(45, 230, 60, 35);
+        label5.setBounds(45, 240, 60, 35);
 
         //---- textField2 ----
         textField2.setFont(textField2.getFont().deriveFont(textField2.getFont().getStyle() | Font.BOLD, textField2.getFont().getSize() + 6f));
         contentPane.add(textField2);
-        textField2.setBounds(105, 232, 195, 34);
+        textField2.setBounds(105, 242, 195, 34);
 
         //---- label6 ----
         label6.setText("\u4f5c\u8005\uff1a");
         label6.setFont(label6.getFont().deriveFont(label6.getFont().getStyle() | Font.BOLD, label6.getFont().getSize() + 6f));
         contentPane.add(label6);
-        label6.setBounds(45, 270, 60, 35);
+        label6.setBounds(45, 290, 60, 35);
 
         //---- textField3 ----
         textField3.setFont(textField3.getFont().deriveFont(textField3.getFont().getStyle() | Font.BOLD, textField3.getFont().getSize() + 6f));
         contentPane.add(textField3);
-        textField3.setBounds(105, 272, 195, 34);
+        textField3.setBounds(105, 292, 195, 34);
 
         //---- label7 ----
         label7.setText("\u8bc4\u7ea7\uff1a");
         label7.setFont(label7.getFont().deriveFont(label7.getFont().getStyle() | Font.BOLD, label7.getFont().getSize() + 6f));
         contentPane.add(label7);
-        label7.setBounds(45, 310, 60, 35);
+        label7.setBounds(45, 340, 60, 35);
 
         //---- textField4 ----
         textField4.setFont(textField4.getFont().deriveFont(textField4.getFont().getStyle() | Font.BOLD, textField4.getFont().getSize() + 6f));
         contentPane.add(textField4);
-        textField4.setBounds(105, 312, 195, 34);
+        textField4.setBounds(105, 342, 195, 34);
 
         //---- label8 ----
+        label8.setText("\u51fa\u7248\u793e\uff1a");
         label8.setFont(label8.getFont().deriveFont(label8.getFont().getStyle() | Font.BOLD, label8.getFont().getSize() + 6f));
         contentPane.add(label8);
         label8.setBounds(370, 190, 95, 35);
 
         //---- label9 ----
+        label9.setText("ISBN\u53f7\uff1a");
         label9.setFont(label9.getFont().deriveFont(label9.getFont().getStyle() | Font.BOLD, label9.getFont().getSize() + 6f));
         contentPane.add(label9);
-        label9.setBounds(370, 230, 100, 35);
+        label9.setBounds(370, 240, 100, 35);
 
         //---- label10 ----
+        label10.setText("\u9875\u6570 \uff1a");
         label10.setFont(label10.getFont().deriveFont(label10.getFont().getStyle() | Font.BOLD, label10.getFont().getSize() + 6f));
         contentPane.add(label10);
-        label10.setBounds(370, 270, 100, 35);
+        label10.setBounds(370, 290, 100, 35);
 
         //---- label11 ----
         label11.setText("\u7c7b\u578b\uff1a");
         label11.setFont(label11.getFont().deriveFont(label11.getFont().getStyle() | Font.BOLD, label11.getFont().getSize() + 6f));
         contentPane.add(label11);
-        label11.setBounds(45, 350, 70, 35);
+        label11.setBounds(45, 390, 70, 35);
 
         //---- textField5 ----
         textField5.setFont(textField5.getFont().deriveFont(textField5.getFont().getStyle() | Font.BOLD, textField5.getFont().getSize() + 6f));
         contentPane.add(textField5);
-        textField5.setBounds(105, 352, 195, 34);
+        textField5.setBounds(105, 392, 195, 34);
 
         //---- textField6 ----
         textField6.setFont(textField6.getFont().deriveFont(Font.BOLD, textField6.getFont().getSize() + 6f));
@@ -195,12 +204,12 @@ public class UpdateInoDisplay extends JFrame {
         //---- textField7 ----
         textField7.setFont(textField7.getFont().deriveFont(textField7.getFont().getStyle() | Font.BOLD, textField7.getFont().getSize() + 6f));
         contentPane.add(textField7);
-        textField7.setBounds(455, 230, 310, 34);
+        textField7.setBounds(455, 240, 310, 34);
 
         //---- textField8 ----
         textField8.setFont(textField8.getFont().deriveFont(textField8.getFont().getStyle() | Font.BOLD, textField8.getFont().getSize() + 6f));
         contentPane.add(textField8);
-        textField8.setBounds(455, 270, 310, 34);
+        textField8.setBounds(455, 290, 310, 34);
 
         //---- button1 ----
         button1.setText("\u786e\u8ba4\u4fee\u6539");
@@ -218,6 +227,16 @@ public class UpdateInoDisplay extends JFrame {
         textField9.setBounds(105, 192, 195, 34);
         contentPane.add(scrollPane2);
         scrollPane2.setBounds(new Rectangle(new Point(450, 305), scrollPane2.getPreferredSize()));
+
+        //---- label15 ----
+        label15.setForeground(Color.red);
+        contentPane.add(label15);
+        label15.setBounds(110, 225, 215, 18);
+
+        //---- label16 ----
+        label16.setForeground(Color.red);
+        contentPane.add(label16);
+        label16.setBounds(110, 425, 215, 18);
 
         contentPane.setPreferredSize(new Dimension(1145, 575));
         pack();
@@ -272,8 +291,10 @@ public class UpdateInoDisplay extends JFrame {
                 grade.isEmpty() || publishHouse.isEmpty() ||ISBN.isEmpty()||
                 pageNumber.isEmpty() || type.isEmpty()){
                     throwClue("请将信息填写完整！");
-                }else if (!newId.matches("\\d{1,9}")){
+                }else if (!label15.getText().equals("")){
                     throwClue("编号格式错误！");
+                }else if(!label16.getText().equals("")){
+                    throwClue("暂不支持此类型！");
                 }else {
                     OperateInformation operate = new DateBase();
                     Result result1 = operate.updateInfo(id,newId,title,author,grade,publishHouse,ISBN,pageNumber,type);
@@ -294,6 +315,23 @@ public class UpdateInoDisplay extends JFrame {
             }
         });
 
+
+        textField9.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (!textField9.getText().matches("\\d{1,9}")){
+                    label15.setText("\u7f16\u53f7\u683c\u5f0f\u9519\u8bef!\uff08\u4ec5\u652f\u63011-9\u4f4d\u6570\u5b57\uff09");
+                }else {
+                    label15.setText("");
+                }
+            }
+        });
+
         textField5.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {
@@ -302,12 +340,13 @@ public class UpdateInoDisplay extends JFrame {
 
             @Override
             public void focusLost(FocusEvent e) {
-                //System.out.println("监听到了");
                 String str = textField5.getText();
+                label16.setText("");
                 switch (str) {
                     case "图书" -> initLabalofBooks();
                     case "视频光盘" -> initLabalofVedio();
                     case "图画" -> initLabalofPicture();
+                    default -> label16.setText("暂不支持此类型！");
                 }
             }
         });
@@ -361,5 +400,7 @@ public class UpdateInoDisplay extends JFrame {
     private JButton button3;
     private JTextField textField9;
     private JScrollPane scrollPane2;
+    private JLabel label15;
+    private JLabel label16;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
