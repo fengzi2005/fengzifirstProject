@@ -24,7 +24,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"
 				"text": "编辑方式"
-				"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 65536, 8, false )
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 8, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 115
 				"y": 110
@@ -32,7 +32,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label3"
 				"text": "媒体编号"
-				"font": #SwingDerivedFont0
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 8, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 83
 				"height": 28
@@ -41,7 +41,7 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "findJTF"
-				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 215
 				"y": 155
@@ -67,6 +67,10 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "findJBT"
 				"text": "确定"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
+				"foreground": sfield java.awt.Color white
+				"background": new java.awt.Color( 102, 153, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 120
 				"y": 235
@@ -76,6 +80,10 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "retrunJBT"
 				"text": "返回"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
+				"foreground": sfield java.awt.Color white
+				"background": new java.awt.Color( 102, 153, 255, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 95
 				"height": 40
