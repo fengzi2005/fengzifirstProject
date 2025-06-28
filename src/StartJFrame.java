@@ -108,7 +108,6 @@ public class StartJFrame extends JFrame {
 
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
 
-
         //======== this ========
         setBackground(Color.white);
         var contentPane = getContentPane();
@@ -158,7 +157,7 @@ public class StartJFrame extends JFrame {
         label1.setText("\u5a92\u4f53\u7ba1\u7406\u7cfb\u7edf");
         label1.setFont(label1.getFont().deriveFont(Font.BOLD, label1.getFont().getSize() + 25f));
         contentPane.add(label1);
-        label1.setBounds(400, 25, 235, 55);
+        label1.setBounds(455, 25, 235, 55);
 
         //======== scrollPane1 ========
         {
@@ -170,7 +169,7 @@ public class StartJFrame extends JFrame {
             scrollPane1.setViewportView(textArea1);
         }
         contentPane.add(scrollPane1);
-        scrollPane1.setBounds(85, 100, 880, 400);
+        scrollPane1.setBounds(85, 100, 995, 400);
 
         //---- button1 ----
         button1.setText("\u65b0\u589e\u5a92\u4f53");
@@ -179,7 +178,7 @@ public class StartJFrame extends JFrame {
         button1.setForeground(Color.white);
         button1.setBorder(null);
         contentPane.add(button1);
-        button1.setBounds(115, 540, 120, 55);
+        button1.setBounds(125, 540, 120, 55);
 
         //---- button2 ----
         button2.setText("\u67e5\u8be2\u5a92\u4f53");
@@ -188,7 +187,7 @@ public class StartJFrame extends JFrame {
         button2.setForeground(Color.white);
         button2.setBorder(null);
         contentPane.add(button2);
-        button2.setBounds(290, 540, 120, 55);
+        button2.setBounds(320, 540, 120, 55);
 
         //---- button3 ----
         button3.setText("\u7f16\u8f91\u5a92\u4f53");
@@ -197,7 +196,7 @@ public class StartJFrame extends JFrame {
         button3.setForeground(Color.white);
         button3.setBorder(null);
         contentPane.add(button3);
-        button3.setBounds(465, 540, 120, 55);
+        button3.setBounds(515, 540, 120, 55);
 
         //---- button4 ----
         button4.setText("\u5bfc\u51fa\u5a92\u4f53");
@@ -206,7 +205,7 @@ public class StartJFrame extends JFrame {
         button4.setForeground(Color.white);
         button4.setBorder(null);
         contentPane.add(button4);
-        button4.setBounds(640, 540, 120, 55);
+        button4.setBounds(710, 540, 120, 55);
 
         //---- button5 ----
         button5.setText("\u5bfc\u5165\u5a92\u4f53");
@@ -215,9 +214,9 @@ public class StartJFrame extends JFrame {
         button5.setForeground(Color.white);
         button5.setBorder(null);
         contentPane.add(button5);
-        button5.setBounds(815, 540, 120, 55);
+        button5.setBounds(905, 540, 120, 55);
 
-        contentPane.setPreferredSize(new Dimension(1055, 665));
+        contentPane.setPreferredSize(new Dimension(1170, 665));
         pack();
         setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on

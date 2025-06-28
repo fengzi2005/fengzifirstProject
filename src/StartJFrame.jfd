@@ -14,7 +14,7 @@ new FormModel {
 				"text": "媒体管理系统"
 				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131073, 25, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 400
+				"x": 455
 				"y": 25
 				"width": 235
 				"height": 55
@@ -30,7 +30,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 85
 				"y": 100
-				"width": 880
+				"width": 995
 				"height": 400
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -41,7 +41,7 @@ new FormModel {
 				"foreground": new java.awt.Color( 255, 255, 255, 255 )
 				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 115
+				"x": 125
 				"y": 540
 				"width": 120
 				"height": 55
@@ -56,7 +56,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 120
 				"height": 55
-				"x": 290
+				"x": 320
 				"y": 540
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -69,7 +69,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 120
 				"height": 55
-				"x": 465
+				"x": 515
 				"y": 540
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -82,7 +82,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 120
 				"height": 55
-				"x": 640
+				"x": 710
 				"y": 540
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
@@ -95,7 +95,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"width": 120
 				"height": 55
-				"x": 815
+				"x": 905
 				"y": 540
 			} )
 			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
@@ -129,8 +129,8 @@ new FormModel {
 				} )
 			}
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 335, 5 )
-			"size": new java.awt.Dimension( 1055, 665 )
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1170, 665 )
 		} )
 	}
 }
