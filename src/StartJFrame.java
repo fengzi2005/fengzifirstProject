@@ -165,7 +165,7 @@ public class StartJFrame extends JFrame {
             //---- textArea1 ----
             textArea1.setFont(textArea1.getFont().deriveFont(textArea1.getFont().getStyle() | Font.BOLD, textArea1.getFont().getSize() + 6f));
             textArea1.setEditable(false);
-            textArea1.setBackground(Color.white);
+            //textArea1.setBackground(Color.white);
             scrollPane1.setViewportView(textArea1);
         }
         contentPane.add(scrollPane1);
@@ -220,7 +220,10 @@ public class StartJFrame extends JFrame {
         pack();
         setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
-        this.getContentPane().setBackground(Color.white);
+        this.getContentPane().setBackground(Color.LIGHT_GRAY);
+        textArea1.setOpaque(false);
+        scrollPane1.setOpaque(false);
+        scrollPane1.getViewport().setOpaque(false);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
