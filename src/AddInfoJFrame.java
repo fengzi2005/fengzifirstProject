@@ -111,7 +111,8 @@ public class AddInfoJFrame extends JFrame {
 
             @Override
             public void focusLost(FocusEvent e) {
-                if(label6.getText().equals("作品的宽：") && !textField7.getText().isEmpty() && !textField7.getText().matches("\\d{1,}")){
+                //System.out.println("监视短");
+                if(label6.getText().equals("作品的宽：") && !textField5.getText().isEmpty() && !textField5.getText().matches("\\d{1,}")){
                     label14.setText("作品的宽只能为整数! （cm）");
                 }else {
                     label14.setText("");
@@ -127,6 +128,7 @@ public class AddInfoJFrame extends JFrame {
 
             @Override
             public void focusLost(FocusEvent e) {
+                //System.out.println("监视长");
                 if(label8.getText().equals("作品的长：") && !textField7.getText().isEmpty() && !textField7.getText().matches("\\d{1,}")){
                     label13.setText("作品的长只能为整数! （cm）");
                 }else {

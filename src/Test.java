@@ -5,7 +5,7 @@ import net.miginfocom.swing.*;
 public class Test {
     public static void main(String[] args) {
 
-        //new AddInfoJFrame();
+        new AddInfoJFrame();
 
         //new TestJF0();
         //new UpdateInfoJF0();
