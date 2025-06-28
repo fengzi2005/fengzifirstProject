@@ -20,37 +20,44 @@ public class UpdateInoDisplay extends JFrame {
     }
 
     private void initComponents(int index,String id,Result result) {
-        textArea1 = new JTextArea();
-        textArea1.setText(result.getDate().toString().replace("\n",""));
-        textArea1.setCaretPosition(0);
-        textArea1.setOpaque(false);
-
+        label1 = new JLabel();
         scrollPane1 = new JScrollPane();
-        scrollPane1.setOpaque(false);
-        scrollPane1.getViewport().setOpaque(false);
-        scrollPane1.setViewportView(textArea1);
-        scrollPane1.setBorder(null);
-
+        textArea1 = new JTextArea();
+        label2 = new JLabel();
+        label3 = new JLabel();
+        label4 = new JLabel();
+        label5 = new JLabel();
+        textField2 = new JTextField();
+        label6 = new JLabel();
+        textField3 = new JTextField();
+        label7 = new JLabel();
+        textField4 = new JTextField();
         label8 = new JLabel();
         label9 = new JLabel();
         label10 = new JLabel();
-        label5 = new JLabel();
-        label15 = new JLabel();
-        label16 = new JLabel();
-        textField2 = new JTextField();
-        textField3 = new JTextField();
-        textField4 = new JTextField();
+        label11 = new JLabel();
         textField5 = new JTextField();
         textField6 = new JTextField();
         textField7 = new JTextField();
         textField8 = new JTextField();
-        textField9 = new JTextField();
-
+        button1 = new JButton();
+        button2 = new JButton();
         button3 = new JButton();
+        textField9 = new JTextField();
+        label15 = new JLabel();
+        label16 = new JLabel();
+        label13 = new JLabel();
+        label14 = new JLabel();
+        button4 = new JButton();
+        
+        textArea1.setText(result.getDate().toString().replace("\n",""));
+        textArea1.setCaretPosition(0);
+        textArea1.setOpaque(false);
 
-        /*this.setComponentZOrder(label8,0);
-        this.setComponentZOrder(label9,0);
-        this.setComponentZOrder(label10,0);*/
+        scrollPane1.setOpaque(false);
+        scrollPane1.getViewport().setOpaque(false);
+        scrollPane1.setViewportView(textArea1);
+        scrollPane1.setBorder(null);
 
         Information info = (Information) result.getDate();
         textField9.setText(info.id);
@@ -78,18 +85,47 @@ public class UpdateInoDisplay extends JFrame {
             initLabalofBooks();
         }
 
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new StartJFrame();
+            }
+        });
+        textField7.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (label9.getText().equals("作品的长：") && !textField7.getText().isEmpty() && !textField7.getText().matches("\\d{1,}")) {
+                    label13.setText("作品的长只能为整数！(cm)");
+                }else {
+                    label13.setText("");
+                }
+            }
+        });
+
+        textField8.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e) {
+
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (label10.getText().equals("作品的宽：") && !textField8.getText().isEmpty() && !textField8.getText().matches("\\d{1,}")) {
+                    label14.setText("作品的宽只能为整数！(cm)");
+                }else {
+                    label14.setText("");
+                }
+            }
+        });
+
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
-        label1 = new JLabel();
-        label2 = new JLabel();
-        label3 = new JLabel();
-        label4 = new JLabel();
-        label5 = new JLabel();
-        label6 = new JLabel();
-        label7 = new JLabel();
-        label11 = new JLabel();
-        button1 = new JButton();
-        button2 = new JButton();
-        scrollPane2 = new JScrollPane();
+
 
         //======== this ========
         setFont(new Font(Font.DIALOG, Font.PLAIN, 17));
@@ -100,7 +136,6 @@ public class UpdateInoDisplay extends JFrame {
         //---- label1 ----
         label1.setText("\u7f16\u8f91\u5a92\u4f53");
         label1.setFont(label1.getFont().deriveFont(label1.getFont().getStyle() | Font.BOLD, label1.getFont().getSize() + 19f));
-        label1.setForeground(UIManager.getColor("ActionButton.focusedBorderColor"));
         contentPane.add(label1);
         label1.setBounds(new Rectangle(new Point(495, 0), label1.getPreferredSize()));
 
@@ -213,20 +248,26 @@ public class UpdateInoDisplay extends JFrame {
 
         //---- button1 ----
         button1.setText("\u786e\u8ba4\u4fee\u6539");
+        button1.setFont(button1.getFont().deriveFont(button1.getFont().getStyle() | Font.BOLD, button1.getFont().getSize() + 6f));
+        button1.setForeground(Color.white);
+        button1.setBackground(new Color(0x6699ff));
+        button1.setBorder(null);
         contentPane.add(button1);
-        button1.setBounds(310, 440, 105, 50);
+        button1.setBounds(255, 445, 110, 55);
 
         //---- button2 ----
         button2.setText("\u8fd4\u56de");
+        button2.setFont(button2.getFont().deriveFont(button2.getFont().getStyle() | Font.BOLD, button2.getFont().getSize() + 6f));
+        button2.setForeground(Color.white);
+        button2.setBackground(new Color(0x6699ff));
+        button2.setBorder(null);
         contentPane.add(button2);
-        button2.setBounds(665, 440, 105, 50);
+        button2.setBounds(755, 445, 110, 55);
 
         //---- textField9 ----
         textField9.setFont(textField9.getFont().deriveFont(textField9.getFont().getStyle() | Font.BOLD, textField9.getFont().getSize() + 6f));
         contentPane.add(textField9);
         textField9.setBounds(105, 192, 195, 34);
-        contentPane.add(scrollPane2);
-        scrollPane2.setBounds(new Rectangle(new Point(450, 305), scrollPane2.getPreferredSize()));
 
         //---- label15 ----
         label15.setForeground(Color.red);
@@ -236,15 +277,32 @@ public class UpdateInoDisplay extends JFrame {
         //---- label16 ----
         label16.setForeground(Color.red);
         contentPane.add(label16);
-        label16.setBounds(110, 425, 215, 18);
+        label16.setBounds(110, 425, 320, 18);
+
+        //---- label13 ----
+        label13.setForeground(Color.red);
+        contentPane.add(label13);
+        label13.setBounds(470, 270, 205, 18);
+
+        //---- label14 ----
+        label14.setForeground(Color.red);
+        contentPane.add(label14);
+        label14.setBounds(470, 320, 205, 18);
+
+        //---- button4 ----
+        button4.setText("\u4e3b\u83dc\u5355");
+        button4.setFont(button4.getFont().deriveFont(button4.getFont().getStyle() | Font.BOLD, button4.getFont().getSize() + 6f));
+        button4.setForeground(Color.white);
+        button4.setBackground(new Color(0x6699ff));
+        button4.setBorder(null);
+        contentPane.add(button4);
+        button4.setBounds(505, 445, 110, 55);
 
         contentPane.setPreferredSize(new Dimension(1145, 575));
         pack();
         setLocationRelativeTo(null);
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
-        JLabel bgJLB = new JLabel(new ImageIcon("findJFramePng/background (5).png"));
-        bgJLB.setBounds(0,0,1159,612);
-        this.getContentPane().add(bgJLB);
+        contentPane.setBackground(Color.white);
         textField2.setOpaque(false);
         textField3.setOpaque(false);
         textField4.setOpaque(false);
@@ -263,7 +321,6 @@ public class UpdateInoDisplay extends JFrame {
             this.getContentPane().add(scrollPane1);
             this.getContentPane().add(button3);
             this.getContentPane().add(button2);
-            this.getContentPane().add(bgJLB);
             button3.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -291,10 +348,9 @@ public class UpdateInoDisplay extends JFrame {
                 grade.isEmpty() || publishHouse.isEmpty() ||ISBN.isEmpty()||
                 pageNumber.isEmpty() || type.isEmpty()){
                     throwClue("请将信息填写完整！");
-                }else if (!label15.getText().equals("")){
-                    throwClue("编号格式错误！");
-                }else if(!label16.getText().equals("")){
-                    throwClue("暂不支持此类型！");
+                }else if (!label15.getText().equals("") || !label16.getText().equals("") ||
+                        !label13.getText().equals("") || !label14.getText().equals("")){
+                    throwClue("信息格式错误！");
                 }else {
                     OperateInformation operate = new DateBase();
                     Result result1 = operate.updateInfo(id,newId,title,author,grade,publishHouse,ISBN,pageNumber,type);
@@ -346,7 +402,7 @@ public class UpdateInoDisplay extends JFrame {
                     case "图书" -> initLabalofBooks();
                     case "视频光盘" -> initLabalofVedio();
                     case "图画" -> initLabalofPicture();
-                    default -> label16.setText("暂不支持此类型！");
+                    default -> label16.setText("暂不支持此类型！(目前仅支持 图书/图画/视频光盘)");
                 }
             }
         });
@@ -397,10 +453,12 @@ public class UpdateInoDisplay extends JFrame {
     private JTextField textField8;
     private JButton button1;
     private JButton button2;
-    private JButton button3;
     private JTextField textField9;
-    private JScrollPane scrollPane2;
     private JLabel label15;
     private JLabel label16;
+    private JLabel label13;
+    private JLabel label14;
+    private JButton button4;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
+    private JButton button3;
 }
