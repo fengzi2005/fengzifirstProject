@@ -126,7 +126,6 @@ public class UpdateInoDisplay extends JFrame {
 
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
 
-
         //======== this ========
         setFont(new Font(Font.DIALOG, Font.PLAIN, 17));
         setTitle("\u5a92\u4f53\u7f16\u8f91\u6a21\u5f0f");
@@ -298,6 +297,15 @@ public class UpdateInoDisplay extends JFrame {
         contentPane.add(button4);
         button4.setBounds(505, 445, 110, 55);
 
+        //---- button3 ----
+        button3.setText("\u786e\u8ba4\u5220\u9664");
+        button3.setFont(button3.getFont().deriveFont(button3.getFont().getStyle() | Font.BOLD, button3.getFont().getSize() + 6f));
+        button3.setForeground(Color.white);
+        button3.setBackground(new Color(0x6699ff));
+        button3.setBorder(null);
+        contentPane.add(button3);
+        button3.setBounds(255, 445, 110, 55);
+
         contentPane.setPreferredSize(new Dimension(1145, 575));
         pack();
         setLocationRelativeTo(null);
@@ -312,15 +320,13 @@ public class UpdateInoDisplay extends JFrame {
         textField8.setOpaque(false);
         textField9.setOpaque(false);
         if (index == 2) {
-            button3.setText("确认删除");
-            contentPane.add(button3);
-            button3.setBounds(310, 440, 105, 50);
             this.getContentPane().removeAll();
+            contentPane.add(button3);
+            contentPane.add(button4);
+            contentPane.add(button2);
             this.getContentPane().add(label1);
             this.getContentPane().add(label2);
             this.getContentPane().add(scrollPane1);
-            this.getContentPane().add(button3);
-            this.getContentPane().add(button2);
             button3.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -459,6 +465,6 @@ public class UpdateInoDisplay extends JFrame {
     private JLabel label13;
     private JLabel label14;
     private JButton button4;
-    // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
     private JButton button3;
+    // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }

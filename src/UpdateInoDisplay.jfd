@@ -279,6 +279,19 @@ new FormModel {
 				"x": 505
 				"y": 445
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "确认删除"
+				"font": #SwingDerivedFont1
+				"foreground": sfield java.awt.Color white
+				"background": #Color0
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 110
+				"height": 55
+				"x": 255
+				"y": 445
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 35 )
 			"size": new java.awt.Dimension( 1145, 575 )
