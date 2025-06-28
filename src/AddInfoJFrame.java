@@ -103,6 +103,13 @@ public class AddInfoJFrame extends JFrame {
             }
         });
 
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new StartJFrame();
+            }
+        });
         textField5.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(FocusEvent e) {

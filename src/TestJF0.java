@@ -11,7 +11,6 @@ public class TestJF0 extends JFrame{
 
 
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         label1 = new JLabel();
         label2 = new JLabel();
         label3 = new JLabel();
@@ -19,6 +18,14 @@ public class TestJF0 extends JFrame{
         dropdown = new JComboBox<>();
         findJBT = new JButton();
         retrunJBT = new JButton();
+        retrunJBT.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new StartJFrame();
+            }
+        });
+        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
 
         //======== this ========
         setFont(new Font(Font.DIALOG, Font.BOLD, 16));
